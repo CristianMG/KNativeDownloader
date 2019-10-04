@@ -13,4 +13,4 @@ class DownloaderEngine {
 
 }
 
-expect fun downloadItem(downloadState: (DownloadState) -> Unit, url: String)
+expect fun downloadItem(downloadState: (DownloadState) -> Unit, url: String): DownloadResult
