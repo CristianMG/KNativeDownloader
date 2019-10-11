@@ -21,7 +21,7 @@ import java.util.*
 /**
  * JVM implementation save the buffer stream
  */
-actual suspend fun saveBufferStremToFile(channel: ByteReadChannel, fileDownload: FileDownload) {
+actual suspend fun saveBufferStreamToFile(channel: ByteReadChannel, fileDownload: FileDownload) {
     val file = File.createTempFile(fileDownload.getRandomUUID(), ".${fileDownload.getExtension()}")
     channel.copyAndClose(file.writeChannel())
 }

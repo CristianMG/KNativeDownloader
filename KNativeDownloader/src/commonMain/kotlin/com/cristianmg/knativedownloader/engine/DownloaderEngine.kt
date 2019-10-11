@@ -33,7 +33,7 @@ class DownloaderEngine(private val httpClient: io.ktor.client.HttpClient) {
                 throw DownloaderException(call.response.toString())
             }
 
-            saveBufferStremToFile(call.response.content, fileDownload)
+            saveBufferStreamToFile(call.response.content, fileDownload)
             callback(DownloadResult.Success(fileDownload))
         } catch (exception: Exception) {
             callback(DownloadResult.Failed(exception, exception.message))
@@ -47,4 +47,4 @@ class DownloaderEngine(private val httpClient: io.ktor.client.HttpClient) {
  * @param channel ByteReadChannel channel to save in file
  * @param fileDownload FileDownload file with information where byte read channel must be save
  */
-expect suspend fun saveBufferStremToFile(channel: ByteReadChannel, fileDownload: FileDownload)
+expect suspend fun saveBufferStreamToFile(channel: ByteReadChannel, fileDownload: FileDownload)
