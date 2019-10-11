@@ -5,6 +5,7 @@ import com.cristianmg.knativedownloader.engine.DownloadResult
 import com.cristianmg.knativedownloader.engine.DownloaderEngine
 import com.cristianmg.knativedownloader.engine.DownloaderEngineListener
 import com.cristianmg.knativedownloader.engine.file.FileDownload
+import kotlinx.coroutines.CoroutineScope
 import kotlin.jvm.Synchronized
 
 /**
