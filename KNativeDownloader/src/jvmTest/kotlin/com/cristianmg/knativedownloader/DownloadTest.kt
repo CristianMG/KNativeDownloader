@@ -7,7 +7,6 @@ import io.ktor.http.ContentType
 import io.ktor.http.fullPath
 import io.ktor.http.headersOf
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert
 import org.junit.Test
 import java.lang.IllegalStateException
 
@@ -17,9 +16,7 @@ class DownloadTest {
     fun checkDownload() {
         runBlocking {
             KNativeDownloader()
-                    .addItemToQueue("https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3") {
-                        Assert.assertTrue(it.success)
-                    }
+                    .addItemToQueue("https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3")
         }
     }
 

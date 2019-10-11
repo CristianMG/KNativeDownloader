@@ -1,19 +1,28 @@
 package com.cristianmg.knativedownloader.engine.file
 
-class FileDownload(val url: String) {
-
-    fun getExtension() = getExtensionFromUrl(url)
-
-    fun getRandomUUID() = getUUID()
-}
-
+/**
+ * This class contains all information about the download
+ * @property url String remote url which found the resource
+ * @property sizeFile Long size file
+ * @property uuid String uuid unique to reference download
+ * @property extension String extensio of download
+ * @property bytesDownloaded Long bytes read at the moment
+ * @constructor
+ */
+data class FileDownload(
+        val url: String,
+        val sizeFile: Long,
+        val uuid: String = getUUID(),
+        val extension: String = getExtensionFromUrl(url),
+        var bytesDownloaded:Long = 0L)
 
 /**
- * Returns an extension from url
+ * @param url String url to extract extension if exist
+ * @return String extension of url
  */
 expect fun getExtensionFromUrl(url: String): String
 
 /**
- * Returns a random uuid
+ * @return String a random uuid
  */
 expect fun getUUID(): String
