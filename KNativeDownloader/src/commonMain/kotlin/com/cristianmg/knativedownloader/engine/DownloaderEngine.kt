@@ -37,7 +37,7 @@ class DownloaderEngine(private val httpClient: io.ktor.client.HttpClient,
             val fileDownload = FileDownload(url, call.response.contentLength() ?: 0L)
 
             val filePath = saveBufferStreamToFile(call.response.content, fileDownload) {
-                Logger.d("Event byte read received state: $fileDownload")
+                Logger.d("download: ${fileDownload.url} byteRad:$it")
             }
 
             fileDownload.downloadedPath = filePath
