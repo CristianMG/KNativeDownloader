@@ -1,5 +1,6 @@
 package com.cristianmg.knativedownloader
 
+import com.cristianmg.knativedownloader.util.existFile
 import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
 import io.ktor.client.request.HttpResponseData
@@ -18,14 +19,13 @@ class MockClient {
         fun getMockClient(): io.ktor.client.HttpClient {
             return io.ktor.client.HttpClient(MockEngine.create {
                 addHandler { request ->
-
                     val name = request.url.fullPath.replace("/", "")
                     val filePath = GENERIC_PATH + name
 
-                    when (name) {
-                        "zip_file.zip" -> getOkRespond(filePath)
-                        "404" -> respond(status = HttpStatusCode.NotFound, content = "", headers = headersOf())
-                        else -> throw IllegalStateException("Error this call is wrong")
+                    if(existFile(filePath)){
+                         getOkRespond(filePath)
+                    }else{
+                        respond(status = HttpStatusCode.NotFound, content = "", headers = headersOf())
                     }
                 }
             })

@@ -6,7 +6,7 @@ package com.cristianmg.knativedownloader.engine.file
  * @property sizeFile Long size file
  * @property uuid String uuid unique to reference download
  * @property extension String extensio of download
- * @property bytesDownloaded Long bytes read at the moment
+ * @property downloadedPath File path where file was downloaded can be null if download was successful or not
  * @constructor
  */
 data class FileDownload(
@@ -14,8 +14,8 @@ data class FileDownload(
         val sizeFile: Long,
         val uuid: String = getUUID(),
         val extension: String = getExtensionFromUrl(url),
-        var bytesDownloaded:Long = 0L)
-
+        var downloadedPath: String? = null
+)
 /**
  * @param url String url to extract extension if exist
  * @return String extension of url
