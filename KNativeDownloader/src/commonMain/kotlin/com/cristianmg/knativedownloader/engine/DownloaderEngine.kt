@@ -42,6 +42,7 @@ class DownloaderEngine(private val httpClient: io.ktor.client.HttpClient,
 
             fileDownload.downloadedPath = filePath
 
+            
             listener?.onDownloadFinish(DownloadResult.Success(fileDownload))
             return DownloadResult.Success(fileDownload)
         } catch (exception: Exception) {

@@ -5,6 +5,7 @@ import com.cristianmg.knativedownloader.engine.DownloadResult
 import com.cristianmg.knativedownloader.engine.DownloaderEngine
 import com.cristianmg.knativedownloader.engine.DownloaderEngineListener
 import com.cristianmg.knativedownloader.engine.file.FileDownload
+import io.ktor.client.request.HttpRequestData
 import kotlinx.coroutines.CoroutineScope
 import kotlin.jvm.Synchronized
 
@@ -24,6 +25,7 @@ class KNativeDownloader(
      */
     suspend fun addItemToQueue(url: String) {
         engine.downloadFile(url)
+
     }
 
 

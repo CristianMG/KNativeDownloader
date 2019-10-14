@@ -1,13 +1,27 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.squareup.sqldelight")
 }
+
+sqldelight {
+    database("KNativeDownloaderDatabase") {
+        packageName = "com.cristianmg.knativedownloader"
+    }
+}
+
+//TODO work around for https://youtrack.jetbrains.com/issue/KT-27170
+configurations {
+    compileClasspath
+}
+
 
 kotlin {
     // android {
     //   publishAllLibraryVariants()
     //}
     jvm()
+
     // iosArm64("ios")
     sourceSets {
         all {
@@ -33,23 +47,6 @@ kotlin {
             }
         }
 
-
-        /*  val iosMain by getting {
-              dependencies {
-                  implementation("io.ktor:ktor-client-ios:1.2.5")
-                  implementation("com.github.aakira:napier-ios:1.0.0")
-
-              }
-          }*/
-
-        /*    val androidMain by getting {
-                dependencies {
-                    implementation(kotlin("stdlib"))
-                    implementation ("io.ktor:ktor-client-okhttp:1.2.5")
-                    implementation("com.github.aakira:napier-android:1.0.0")
-                }
-            }
-    */
         val jvmMain by getting {
             dependencies {
                 implementation(kotlin("stdlib"))
@@ -57,7 +54,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-okhttp:1.2.5")
                 implementation("org.apache.commons:commons-io:1.3.2")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
-
+                implementation ("com.squareup.sqldelight:sqlite-driver:1.2.0")
             }
         }
         val jvmTest by getting {
@@ -70,12 +67,14 @@ kotlin {
             }
 
         }
-
-
     }
+
 }
 
+
+
 android {
+
     compileSdkVersion(28)
 
     defaultConfig {
@@ -83,5 +82,11 @@ android {
     }
 
     testOptions.unitTests.isIncludeAndroidResources = true
+
+    packagingOptions {
+        exclude ("META-INF/*.kotlin_module")
+    }
 }
+
+
 
