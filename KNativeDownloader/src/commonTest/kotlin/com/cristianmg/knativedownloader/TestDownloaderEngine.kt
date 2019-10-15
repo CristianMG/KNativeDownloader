@@ -5,8 +5,6 @@ import com.cristianmg.knativedownloader.engine.DownloaderEngine
 import com.cristianmg.knativedownloader.util.existFile
 import kotlinx.coroutines.*
 import kotlin.test.*
-import kotlin.time.ExperimentalTime
-import kotlin.time.measureTimedValue
 
 class TestDownloaderEngine {
 
