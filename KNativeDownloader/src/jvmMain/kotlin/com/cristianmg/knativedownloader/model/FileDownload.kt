@@ -1,4 +1,4 @@
-package com.cristianmg.knativedownloader.engine.file
+package com.cristianmg.knativedownloader.model
 
 import org.apache.commons.io.FilenameUtils
 import java.net.URI

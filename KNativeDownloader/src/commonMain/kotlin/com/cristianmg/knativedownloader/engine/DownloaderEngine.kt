@@ -1,7 +1,7 @@
 package com.cristianmg.knativedownloader.engine
 
-import com.cristianmg.knativedownloader.engine.file.FileDownload
-import com.cristianmg.knativedownloader.engine.file.FileProgress
+import com.cristianmg.knativedownloader.getCurrentThread
+import com.cristianmg.knativedownloader.model.FileDownload
 import com.cristianmg.knativedownloader.log.Logger
 import io.ktor.client.call.call
 import io.ktor.client.request.HttpRequestBuilder
@@ -10,6 +10,7 @@ import io.ktor.http.HttpMethod
 import io.ktor.http.contentLength
 import io.ktor.http.isSuccess
 import kotlinx.coroutines.io.ByteReadChannel
+import kotlin.native.concurrent.ThreadLocal
 
 /**
  * @property httpClient HttpClient client ktor that we have to use for download
@@ -22,11 +23,12 @@ class DownloaderEngine(private val httpClient: io.ktor.client.HttpClient,
     /**
      * @param url String url file to download
      */
-    suspend fun downloadFile(url: String): DownloadResult {
+    suspend fun downloadFile(download: FileDownload): DownloadResult {
         try {
+            Logger.d("Download request in thread ${getCurrentThread()}")
             val call = httpClient.call(HttpRequestBuilder()
                     .apply {
-                        url(url)
+                        url(download.url)
                         method = HttpMethod.Get
                     }
             )
@@ -34,17 +36,16 @@ class DownloaderEngine(private val httpClient: io.ktor.client.HttpClient,
                 throw DownloaderException(call.response.toString())
             }
 
-            val fileDownload = FileDownload(url, call.response.contentLength() ?: 0L)
+            download.sizeFile = call.response.contentLength() ?: 0L
 
-            val filePath = saveBufferStreamToFile(call.response.content, fileDownload) {
-                Logger.d("download: ${fileDownload.url} byteRad:$it")
+            val filePath = saveBufferStreamToFile(call.response.content, download) {
+                Logger.d("download: ${download.url} byteRad:$it")
             }
 
-            fileDownload.downloadedPath = filePath
+            download.downloadedPath = filePath
 
-            
-            listener?.onDownloadFinish(DownloadResult.Success(fileDownload))
-            return DownloadResult.Success(fileDownload)
+            listener?.onDownloadFinish(DownloadResult.Success(download))
+            return DownloadResult.Success(download)
         } catch (exception: Exception) {
             val downloadFailure = DownloadResult.Failed(exception, exception.message)
             listener?.onDownloadFinish(downloadFailure)

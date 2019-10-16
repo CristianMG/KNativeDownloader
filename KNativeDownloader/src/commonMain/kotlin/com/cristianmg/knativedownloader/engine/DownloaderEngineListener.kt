@@ -1,6 +1,6 @@
 package com.cristianmg.knativedownloader.engine
 
-import com.cristianmg.knativedownloader.engine.file.FileDownload
+import com.cristianmg.knativedownloader.model.FileDownload
 
 /**
  * Callback engine that use to report to @KNativeDownloader about download process

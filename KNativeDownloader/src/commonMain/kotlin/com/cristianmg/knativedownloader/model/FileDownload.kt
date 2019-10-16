@@ -1,4 +1,4 @@
-package com.cristianmg.knativedownloader.engine.file
+package com.cristianmg.knativedownloader.model
 
 /**
  * This class contains all information about the download
@@ -11,7 +11,7 @@ package com.cristianmg.knativedownloader.engine.file
  */
 data class FileDownload(
         val url: String,
-        val sizeFile: Long,
+        var sizeFile: Long? = null,
         val uuid: String = getUUID(),
         val extension: String = getExtensionFromUrl(url),
         var downloadedPath: String? = null

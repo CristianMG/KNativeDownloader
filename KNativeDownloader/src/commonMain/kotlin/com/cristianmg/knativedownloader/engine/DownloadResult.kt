@@ -1,6 +1,6 @@
 package com.cristianmg.knativedownloader.engine
 
-import com.cristianmg.knativedownloader.engine.file.FileDownload
+import com.cristianmg.knativedownloader.model.FileDownload
 
 /**
  * This class represents the download's state for each moment

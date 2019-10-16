@@ -1,6 +1,18 @@
-CREATE TABLE player (
-  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-  first_name TEXT NOT NULL,
-  last_name TEXT NOT NULL,
-  number INTEGER AS Integer NOT NULL,
-  age INTEGER AS Integer NOT NULL);
+CREATE TABLE download (
+  url TEXT NOT NULL PRIMARY KEY,
+  uuid TEXT NOT NULL,
+  size_file INTEGER,
+  extension TEXT NOT NULL,
+  downloaded_path TEXT);
+
+
+selectAll:
+SELECT * FROM download ORDER BY uuid LIMIT :limit;
+
+insert:
+INSERT INTO download (url,uuid,size_file,extension,downloaded_path)
+VALUES(?,?,?,?,?);
+
+remove:
+DELETE FROM download
+WHERE url = ?;

@@ -1,6 +1,6 @@
 package com.cristianmg.knativedownloader.engine
 
-import com.cristianmg.knativedownloader.engine.file.FileDownload
+import com.cristianmg.knativedownloader.model.FileDownload
 import io.ktor.util.KtorExperimentalAPI
 import io.ktor.util.cio.writeChannel
 import kotlinx.coroutines.io.ByteReadChannel
