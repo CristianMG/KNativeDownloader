@@ -31,7 +31,7 @@ class KNativeDownloader(
      * Add item to database for the next iteration download
      * @param url String
      */
-    suspend fun addItemToQueue(url: String) {
+    fun addItemToQueue(url: String) {
         val download = FileDownload(url)
         repository.insertDownload(download)
         checkDownload()
@@ -41,15 +41,24 @@ class KNativeDownloader(
      * Stop download if it's started and remove from queue
      * @param url String url which we want remove and stop from downloader
      */
-    suspend fun stopAndRemoveDownload(url: String) {
+    fun stopAndRemoveDownload(url: String) {
         val downloadJob = getDownloadJobFromUrl(url)
-        if(downloadJob!=null){
+        if (downloadJob != null) {
             if (downloadJob.job.isActive)
                 downloadJob.job.cancel("Download cance by client")
             jobs.remove(downloadJob)
         }
         repository.deleteDownload(url)
     }
+
+    /**
+     * Stop all downloads and clear queue
+     */
+    fun stopAllDownloads() {
+        jobs.forEach { it.job.cancel("Cancel by client") }
+        jobs.clear()
+    }
+
 
     fun getDownloadJobFromUrl(url: String): DownloadJob? {
         return jobs.firstOrNull { it.fileDownload.url == url }
@@ -58,17 +67,15 @@ class KNativeDownloader(
     /**
      * Check and add jobs to deffered
      */
-    suspend fun checkDownload() {
-        repository.getDownloadAtLimit(PARALLEL_DOWNLOADS_DEFAULT)
-                .apply {
-                    forEach { fileDownload -> jobs.add(DownloadJob(fileDownload, GlobalScope.async { engine.downloadFile(fileDownload) })) }
-                }
-
-    }
-
-    fun stopDownloads() {
-        jobs.forEach { it.job.cancel("Cancel by client") }
-        jobs.clear()
+    fun checkDownload() {
+        if (jobs.size < PARALLEL_DOWNLOADS_DEFAULT) {
+            repository.getDownloadAtLimit(parallelDownloads)
+                    .apply {
+                        forEach { fileDownload -> jobs.add(DownloadJob(fileDownload, GlobalScope.async { engine.downloadFile(fileDownload) })) }
+                    }
+        } else {
+            Logger.d("Maximum parallel downloads downloaded")
+        }
     }
 
     @Synchronized
@@ -77,7 +84,7 @@ class KNativeDownloader(
 
     @Synchronized
     override fun onDownloadFinish(downloadResult: DownloadResult) {
-
+        stopAndRemoveDownload(downloadResult.fileDownload.url)
     }
 
 

@@ -23,7 +23,7 @@ class KNativeDownloadRepository(
      * Insert in database a download waiting for engine start to download
      * @param file FileDownload
      */
-    suspend fun insertDownload(file: FileDownload) {
+    fun insertDownload(file: FileDownload) {
         database.downloadQueries.insert(file.url, file.uuid, file.sizeFile, file.extension, file.downloadedPath)
     }
 
@@ -31,11 +31,11 @@ class KNativeDownloadRepository(
      * Delete download from queue
      * @param url String
      */
-    suspend fun deleteDownload(url: String) {
+    fun deleteDownload(url: String) {
         database.downloadQueries.remove(url)
     }
 
-    suspend fun getDownloadAtLimit(limit: Long): List<FileDownload> {
+    fun getDownloadAtLimit(limit: Long): List<FileDownload> {
         return database.downloadQueries.selectAll(limit)
                 .executeAsList()
                 .map {

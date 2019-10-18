@@ -8,6 +8,12 @@ import com.cristianmg.knativedownloader.model.FileDownload
 interface DownloaderEngineListener{
 
     /**
+     * This function is call when engine start to download file
+     * @param fileDownload FileDownload filw
+     */
+    fun onDownloadStart(fileDownload: FileDownload)
+
+    /**
      * This function is call to report that download progress change
      * @param fileDownload FileDownload file download with the progress of file
      */
