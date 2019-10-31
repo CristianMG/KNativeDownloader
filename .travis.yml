@@ -15,5 +15,8 @@ jobs:
     - stage: build
       script: ./buildscript/build.sh
 
+    - stage: permissionTest
+      script: chmod +x ./buildscript/test.sh
+
     - stage: test
-      script: gradle allTest
+      script: ./buildscript/test.sh
