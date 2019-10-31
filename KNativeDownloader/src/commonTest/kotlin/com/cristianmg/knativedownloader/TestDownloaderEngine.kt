@@ -2,6 +2,7 @@ package com.cristianmg.knativedownloader
 
 import com.cristianmg.knativedownloader.engine.DownloadResult
 import com.cristianmg.knativedownloader.engine.DownloaderEngine
+import com.cristianmg.knativedownloader.model.FileDownload
 import com.cristianmg.knativedownloader.util.existFile
 import kotlinx.coroutines.*
 import kotlin.test.*
@@ -12,16 +13,16 @@ class TestDownloaderEngine {
 
     @Test
     fun `engine is able to download a file example`(): Unit = runTest {
-        val result = engine.downloadFile(getUrlTestDocument())
+        val result = engine.downloadFile(FileDownload(getUrlTestDocument()))
         checkDownloadResult(result)
     }
 
 
     @Test
     fun `download multiple files`(): Unit = runTest {
-        val one = CoroutineScope(Dispatchers.Unconfined).async { engine.downloadFile(getUrlTestDocument(1)) }
-        val two = CoroutineScope(Dispatchers.Unconfined).async { engine.downloadFile(getUrlTestDocument(2)) }
-        val three = CoroutineScope(Dispatchers.Unconfined).async { engine.downloadFile(getUrlTestDocument(3)) }
+        val one = CoroutineScope(Dispatchers.Unconfined).async { engine.downloadFile(FileDownload(getUrlTestDocument(1))) }
+        val two = CoroutineScope(Dispatchers.Unconfined).async { engine.downloadFile(FileDownload(getUrlTestDocument(2))) }
+        val three = CoroutineScope(Dispatchers.Unconfined).async { engine.downloadFile(FileDownload(getUrlTestDocument(3))) }
         val list:List<DownloadResult> = listOf(one,two,three).awaitAll()
         for (result in list) {
             checkDownloadResult(result)
@@ -30,7 +31,7 @@ class TestDownloaderEngine {
 
     @Test
     fun `engine return a 404 error when get a paged not exist`(): Unit = runTest {
-        val downloadResult = engine.downloadFile(URL_WASNT_FOUND)
+        val downloadResult = engine.downloadFile(FileDownload(URL_WASNT_FOUND))
         assertTrue {
             downloadResult is DownloadResult.Failed
         }
