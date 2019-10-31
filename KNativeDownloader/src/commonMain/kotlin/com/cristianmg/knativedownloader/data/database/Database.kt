@@ -1,6 +1,6 @@
 package com.cristianmg.knativedownloader.data.database
 
-import com.cristianmg.knativedownloader.KNativeDownloaderDatabase
+import com.cristianmg.knativedownloader.database.KNativeDownloaderDatabase
 import com.cristianmg.knativedownloader.log.Logger
 
 /**

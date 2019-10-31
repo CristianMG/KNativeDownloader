@@ -1,7 +1,7 @@
 package com.cristianmg.knativedownloader.data
 
-import com.cristianmg.knativedownloader.KNativeDownloaderDatabase
 import com.cristianmg.knativedownloader.data.database.Database
+import com.cristianmg.knativedownloader.database.KNativeDownloaderDatabase
 import com.cristianmg.knativedownloader.model.FileDownload
 
 /**

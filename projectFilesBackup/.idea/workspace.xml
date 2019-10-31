@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f40ff16-9a7e-459e-b838-96f0d886d2c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/engine/DownloaderEngine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/engine/DownloaderEngine.kt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/KNativeDownloader/.gradle/" />
+    <ignored path="$PROJECT_DIR$/KNativeDownloader/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_6_API_29" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/KNativeDownloader">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KNativeDownloader" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KNativeDownloader" type="f1a62948:ProjectNode" />
+                <item name="KNativeDownloader" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KNativeDownloader" type="f1a62948:ProjectNode" />
+                <item name="KNativeDownloader" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KNativeDownloader" type="f1a62948:ProjectNode" />
+                <item name="KNativeDownloader" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="sqldelight" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KNativeDownloader" type="f1a62948:ProjectNode" />
+                <item name="KNativeDownloader" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KNativeDownloader" type="f1a62948:ProjectNode" />
+                <item name="KNativeDownloader-KNativeDownloader" type="2d1252cf:ModuleNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonTest/kotlin/com/cristianmg/knativedownloader/TestDownloaderEngine.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KNativeDownloader/build/sqldelight/code/KNativeDownloaderDatabase/com/cristianmg/knativedownloader/KNativeDownloader/KNativeDownloaderDatabaseImpl.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/data/KNativeDownloadRepository.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+              <folding>
+                <element signature="e#47#234#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNativeDownloader/build.gradle.kts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/engine/DownloaderEngine.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="49" column="65" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/client/DefaultHttpClient.kt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>gradl</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/KNativeDownloader/src/commonTest/kotlin/com/cristianmg/knativedownloader/TestDownloaderEngine.kt" />
+        <option value="$PROJECT_DIR$/.circleci/config.yml" />
+        <option value="$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/data/KNativeDownloadRepository.kt" />
+        <option value="$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/engine/DownloaderEngine.kt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2535" />
+    <option name="y" value="23" />
+    <option name="width" value="2048" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commonTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commonTest" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commonTest" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commonTest" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cristianmg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNativeDownloader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="KNativeDownloader" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commonTest" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cristianmg" type="462c0819:PsiDirectoryNode" />
+              <item name="knativedownloader" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.KNativeDownloader [allTests]">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KNativeDownloader [allTests]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="allTests" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="KNativeDownloader [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="check" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="KNativeDownloader [generateJvmMainKNativeDownloaderDatabaseInterface]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="generateJvmMainKNativeDownloaderDatabaseInterface" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDownloaderEngine [jvmTest]" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="KNativeDownloader-KNativeDownloader_jvmTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cristianmg.knativedownloader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cristianmg.knativedownloader" />
+      <option name="MAIN_CLASS_NAME" value="com.cristianmg.knativedownloader.TestDownloaderEngine" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDownloaderEngine.download multiple files [jvmTest]" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="KNativeDownloader-KNativeDownloader_jvmTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cristianmg.knativedownloader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cristianmg.knativedownloader" />
+      <option name="MAIN_CLASS_NAME" value="com.cristianmg.knativedownloader.TestDownloaderEngine" />
+      <option name="METHOD_NAME" value="download multiple files" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.KNativeDownloader [allTests]" />
+        <item itemvalue="Gradle.KNativeDownloader [check]" />
+        <item itemvalue="JUnit.TestDownloaderEngine.download multiple files [jvmTest]" />
+        <item itemvalue="JUnit.TestDownloaderEngine [jvmTest]" />
+        <item itemvalue="Gradle.KNativeDownloader [generateJvmMainKNativeDownloaderDatabaseInterface]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f40ff16-9a7e-459e-b838-96f0d886d2c2" name="Default Changelist" comment="" />
+      <created>1572558035518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572558035518</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="KNativeDownloader_[allTests] - 2019.10.31 at 23h 08m 18s.xml">
+      <configuration name="KNativeDownloader [allTests]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="KNativeDownloader_[allTests] - 2019.10.31 at 23h 09m 04s.xml">
+      <configuration name="KNativeDownloader [allTests]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestDownloaderEngine_[jvmTest] - 2019.10.31 at 23h 12m 13s.xml">
+      <configuration name="TestDownloaderEngine [jvmTest]" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KNativeDownloader_[allTests] - 2019.10.31 at 23h 12m 18s.xml">
+      <configuration name="KNativeDownloader [allTests]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="KNativeDownloader_[jvmTest] - 2019.10.31 at 23h 12m 49s.xml">
+      <configuration name="KNativeDownloader [jvmTest]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestDownloaderEngine_engine_is_able_to_download_a_file_example_[jvmTest] - 2019.10.31 at 23h 12m 54s.xml">
+      <configuration name="TestDownloaderEngine.engine is able to download a file example [jvmTest]" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDownloaderEngine_[jvmTest] - 2019.10.31 at 23h 13m 39s.xml">
+      <configuration name="TestDownloaderEngine [jvmTest]" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDownloaderEngine_download_multiple_files_[jvmTest] - 2019.10.31 at 23h 14m 06s.xml">
+      <configuration name="TestDownloaderEngine.download multiple files [jvmTest]" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KNativeDownloader_[check] - 2019.10.31 at 23h 14m 09s.xml">
+      <configuration name="KNativeDownloader [check]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="KNativeDownloader_[allTests] - 2019.10.31 at 23h 14m 16s.xml">
+      <configuration name="KNativeDownloader [allTests]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2048" y="23" width="1920" height="1057" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.3519702" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" weight="0.32908705" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32908705" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" weight="0.3301486" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Gradle" visible="true" weight="0.32960597" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmTest/kotlin/com/cristianmg/knativedownloader/CoroutinesTest.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmTest/kotlin/com/cristianmg/knativedownloader/MockClient.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmTest/kotlin/com/cristianmg/knativedownloader/util/FileUtils.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmMain/kotlin/com/cristianmg/knativedownloader/client/HttpClient.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmMain/kotlin/com/cristianmg/knativedownloader/data/database/SqlDriver.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmMain/kotlin/com/cristianmg/knativedownloader/engine/DownloaderEngine.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmMain/kotlin/com/cristianmg/knativedownloader/model/FileDownload.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmMain/kotlin/com/cristianmg/knativedownloader/util/Platform.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/jvmMain/kotlin/com/cristianmg/knativedownloader/CoroutineUtil.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonTest/kotlin/com/cristianmg/knativedownloader/util/FileUtil.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonTest/kotlin/com/cristianmg/knativedownloader/CoroutinesTest.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonTest/kotlin/com/cristianmg/knativedownloader/MockClient.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/data/database/Database.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/data/database/SqlDriver.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/engine/DownloaderEngineListener.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/client/DefaultHttpClient.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/engine/DownloaderEngine.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="49" column="65" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/build.gradle.kts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonMain/kotlin/com/cristianmg/knativedownloader/data/KNativeDownloadRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="e#47#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/src/commonTest/kotlin/com/cristianmg/knativedownloader/TestDownloaderEngine.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNativeDownloader/build/sqldelight/code/KNativeDownloaderDatabase/com/cristianmg/knativedownloader/KNativeDownloader/KNativeDownloaderDatabaseImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

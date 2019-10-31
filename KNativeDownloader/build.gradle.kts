@@ -6,7 +6,7 @@ plugins {
 
 sqldelight {
     database("KNativeDownloaderDatabase") {
-        packageName = "com.cristianmg.knativedownloader"
+        packageName = "com.cristianmg.knativedownloader.database"
     }
 }
 
