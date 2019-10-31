@@ -8,7 +8,12 @@ android:
 
 jobs:
   include:
+
+    - stage: permission
+      script: chmod +x ./buildscript/build.sh
+
     - stage: build
-      script: gradle build
+      script: ./buildscript/build.sh
+
     - stage: test
       script: gradle allTest
