@@ -1,0 +1,18 @@
+CREATE TABLE download (
+  url TEXT NOT NULL PRIMARY KEY,
+  uuid TEXT NOT NULL,
+  size_file INTEGER,
+  extension TEXT NOT NULL,
+  downloaded_path TEXT);
+
+
+selectAll:
+SELECT * FROM download ORDER BY uuid LIMIT :limit;
+
+insert:
+INSERT INTO download (url,uuid,size_file,extension,downloaded_path)
+VALUES(?,?,?,?,?);
+
+remove:
+DELETE FROM download
+WHERE url = ?;

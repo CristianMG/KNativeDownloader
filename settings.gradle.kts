@@ -17,5 +17,5 @@ pluginManagement {
         jcenter()
     }
 }
-enableFeaturePreview("GRADLE_METADATA")
 include(":KNativeDownloader")
+enableFeaturePreview("GRADLE_METADATA")
