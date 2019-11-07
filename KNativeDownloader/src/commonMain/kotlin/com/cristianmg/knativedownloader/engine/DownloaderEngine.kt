@@ -47,7 +47,7 @@ class DownloaderEngine(private val httpClient: io.ktor.client.HttpClient,
             listener?.onDownloadFinish(DownloadResult.Success(download))
             return DownloadResult.Success(download)
         } catch (exception: Exception) {
-            val downloadFailure = DownloadResult.Failed(exception, exception.message)
+            val downloadFailure = DownloadResult.Failed(download,exception, exception.message)
             listener?.onDownloadFinish(downloadFailure)
             return downloadFailure
         }

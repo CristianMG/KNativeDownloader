@@ -78,6 +78,9 @@ class KNativeDownloader(
         }
     }
 
+    override fun onDownloadStart(fileDownload: FileDownload) {
+    }
+
     @Synchronized
     override fun onProgressDownloadChange(fileDownload: FileDownload) {
     }

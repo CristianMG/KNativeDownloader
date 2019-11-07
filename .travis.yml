@@ -1,0 +1,22 @@
+language: android
+dist: trusty
+android:
+  components:
+    - build-tools-26.0.2
+    - android-26
+    - extra
+
+jobs:
+  include:
+
+    - stage: permission
+      script: chmod +x ./buildscript/build.sh
+
+    - stage: build
+      script: ./buildscript/build.sh
+
+    - stage: permissionTest
+      script: chmod +x ./buildscript/test.sh
+
+    - stage: test
+      script: ./buildscript/test.sh
