@@ -1,7 +1,7 @@
 package com.cristianmg.knativedownloader.data
 
 import com.cristianmg.knativedownloader.data.database.Database
-import com.cristianmg.knativedownloader.database.KNativeDownloaderDatabase
+import com.cristianmg.knativedownloader.model.DownloadState
 import com.cristianmg.knativedownloader.model.FileDownload
 
 /**
@@ -10,13 +10,13 @@ import com.cristianmg.knativedownloader.model.FileDownload
  * @constructor
  */
 class KNativeDownloadRepository(
-        private val database: KNativeDownloaderDatabase
+        private val database: Database
 ) {
     companion object {
         /**
          * Singleton instance
          */
-        val instance: KNativeDownloadRepository by lazy { KNativeDownloadRepository(Database.instance) }
+        val instance: KNativeDownloadRepository by lazy { KNativeDownloadRepository(Database) }
     }
 
     /***
@@ -24,7 +24,7 @@ class KNativeDownloadRepository(
      * @param file FileDownload
      */
     fun insertDownload(file: FileDownload) {
-        database.downloadQueries.insert(file.url, file.uuid, file.sizeFile, file.extension, file.downloadedPath)
+        database.instance.downloadQueries.insert(file.url, file.uuid, file.sizeFile, file.extension, file.downloadedPath,file.state.state)
     }
 
     /***
@@ -32,15 +32,28 @@ class KNativeDownloadRepository(
      * @param url String
      */
     fun deleteDownload(url: String) {
-        database.downloadQueries.remove(url)
+        database.instance.downloadQueries.remove(url)
     }
 
     fun getDownloadAtLimit(limit: Long): List<FileDownload> {
-        return database.downloadQueries.selectAll(limit)
+        return database.instance.downloadQueries.selectAll(limit)
                 .executeAsList()
                 .map {
                     FileDownload(it.url, it.size_file, it.uuid, it.extension, it.downloaded_path)
                 }
+    }
+
+    fun getNextQueueItem(): FileDownload? {
+        return database.instance.downloadQueries.nextDownload(1)
+                .executeAsList()
+                .map {
+                    FileDownload(it.url, it.size_file, it.uuid, it.extension, it.downloaded_path)
+                }
+                .firstOrNull()
+    }
+
+    fun updateStateDownload(uuid: String, newState: DownloadState) {
+
     }
 
 }

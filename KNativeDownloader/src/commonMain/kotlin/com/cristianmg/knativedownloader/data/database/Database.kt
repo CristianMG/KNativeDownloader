@@ -1,6 +1,6 @@
 package com.cristianmg.knativedownloader.data.database
 
-import com.cristianmg.knativedownloader.database.KNativeDownloaderDatabase
+import com.cristianmg.knativedownloader.db.knativedownloaderdatabase
 import com.cristianmg.knativedownloader.log.Logger
 
 /**
@@ -15,5 +15,5 @@ object Database {
     /**
      * Singleton instance
      */
-    val instance: KNativeDownloaderDatabase by lazy { KNativeDownloaderDatabase(getSQlDriver()) }
+    val instance: knativedownloaderdatabase by lazy { knativedownloaderdatabase(getSQlDriver()) }
 }

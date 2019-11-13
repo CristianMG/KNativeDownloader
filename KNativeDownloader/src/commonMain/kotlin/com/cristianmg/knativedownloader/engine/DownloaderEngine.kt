@@ -10,7 +10,6 @@ import io.ktor.http.HttpMethod
 import io.ktor.http.contentLength
 import io.ktor.http.isSuccess
 import kotlinx.coroutines.io.ByteReadChannel
-import kotlin.native.concurrent.ThreadLocal
 
 /**
  * @property httpClient HttpClient client ktor that we have to use for download

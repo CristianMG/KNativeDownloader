@@ -1,3 +1,6 @@
 package com.cristianmg.knativedownloader
 
-expect fun getCurrentThread() : String
+import kotlinx.coroutines.CoroutineScope
+
+expect fun getCurrentThread(): String
+expect fun getCoroutineScope(): CoroutineScope

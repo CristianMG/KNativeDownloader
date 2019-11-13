@@ -7,6 +7,7 @@ package com.cristianmg.knativedownloader.model
  * @property uuid String uuid unique to reference download
  * @property extension String extensio of download
  * @property downloadedPath File path where file was downloaded can be null if download was successful or not
+ * @property state represents the currently state of download
  * @constructor
  */
 data class FileDownload(
@@ -14,7 +15,8 @@ data class FileDownload(
         var sizeFile: Long? = null,
         val uuid: String = getUUID(),
         val extension: String = getExtensionFromUrl(url),
-        var downloadedPath: String? = null
+        var downloadedPath: String? = null,
+        var state:DownloadState = DownloadState.PENDING
 )
 /**
  * @param url String url to extract extension if exist

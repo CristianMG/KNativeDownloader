@@ -3,15 +3,20 @@ CREATE TABLE download (
   uuid TEXT NOT NULL,
   size_file INTEGER,
   extension TEXT NOT NULL,
-  downloaded_path TEXT);
+  downloaded_path TEXT,
+  state TEXT NOT NULL
+);
 
 
 selectAll:
 SELECT * FROM download ORDER BY uuid LIMIT :limit;
 
+nextDownload:
+SELECT * FROM download WHERE state == 'PENDING' ORDER BY uuid LIMIT :limit;
+
 insert:
-INSERT INTO download (url,uuid,size_file,extension,downloaded_path)
-VALUES(?,?,?,?,?);
+INSERT INTO download (url,uuid,size_file,extension,downloaded_path,state)
+VALUES(?,?,?,?,?,?);
 
 remove:
 DELETE FROM download
