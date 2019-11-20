@@ -2,7 +2,12 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.squareup.sqldelight")
+    id("maven-publish")
 }
+
+group = "com.cristianmg.knativedownloader"
+version = "0.0.1"
+
 
 sqldelight {
     database("KNativeDownloaderDatabase") {
