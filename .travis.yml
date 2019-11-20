@@ -1,22 +1,29 @@
 language: android
-dist: trusty
+jdk: oraclejdk8
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
+
+env:
+  global:
+    - ANDROID_API_LEVEL=28
+    - ANDROID_BUILD_TOOLS_VERSION=28.0.3
+
 android:
   components:
-    - build-tools-26.0.2
-    - android-26
+    - tools
+    - tools # Running this twice get's the latest build tools (https://github.com/codepath/android_guides/wiki/Setting-up-Travis-CI)
+    - platform-tools
+    - android-${ANDROID_API_LEVEL}
+    - build-tools-${ANDROID_BUILD_TOOLS_VERSION}
     - extra
 
-jobs:
-  include:
-
-    - stage: permission
-      script: chmod +x ./buildscript/build.sh
-
-    - stage: build
-      script: ./buildscript/build.sh
-
-    - stage: permissionTest
-      script: chmod +x ./buildscript/test.sh
-
-    - stage: test
-      script: ./buildscript/test.sh
+script:
+  - ./gradlew check
