@@ -1,3 +1,4 @@
+
 CREATE TABLE download (
   url TEXT NOT NULL PRIMARY KEY,
   uuid TEXT NOT NULL,
@@ -12,12 +13,23 @@ selectAll:
 SELECT * FROM download ORDER BY uuid LIMIT :limit;
 
 nextDownload:
-SELECT * FROM download WHERE state == 'PENDING' ORDER BY uuid LIMIT :limit;
+SELECT * FROM download WHERE state="PENDING" ORDER BY 'ASC' LIMIT :limit;
 
 insert:
 INSERT INTO download (url,uuid,size_file,extension,downloaded_path,state)
 VALUES(?,?,?,?,?,?);
 
+getById:
+SELECT * FROM download WHERE uuid = ?;
+
+updateStateDownload:
+UPDATE download
+SET state = ?
+WHERE uuid = ?;
+
 remove:
 DELETE FROM download
 WHERE url = ?;
+
+removeAll:
+DELETE FROM download;

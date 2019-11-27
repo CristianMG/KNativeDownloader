@@ -12,6 +12,15 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.cancel
 
+/**
+ *
+ * @property httpClient HttpClient
+ * @property repository KNativeDownloadRepository
+ * @property jobs MutableList<DownloadJob>
+ * @property engine DownloaderEngine
+ * @property scope CoroutineScope
+ * @constructor
+ */
 class DownloadQueue(
         private val httpClient: io.ktor.client.HttpClient = HttpClient.clientDefault()
 ) : DownloaderEngineListener {
@@ -68,7 +77,7 @@ class DownloadQueue(
      */
     override fun onDownloadFinish(downloadResult: DownloadResult) {
         val newState = when (downloadResult) {
-            is DownloadResult.Success -> DownloadState.SUCESS
+            is DownloadResult.Success -> DownloadState.SUCCESS
             is DownloadResult.Failed -> DownloadState.FAIL
         }
         repository.updateStateDownload(downloadResult.fileDownload.uuid, newState)

@@ -6,18 +6,17 @@ import com.cristianmg.knativedownloader.model.FileDownload
 
 /**
  * @property httpClient HttpClient ktor client to do downloads
- * @property engine DownloaderEngine instance of engine
  * @constructor
  */
-class KNativeDownloader(
-        private val httpClient: io.ktor.client.HttpClient = HttpClient.clientDefault()
-) {
-
+class KNativeDownloader(private val httpClient: io.ktor.client.HttpClient = HttpClient.clientDefault()) {
 
     private val repository: KNativeDownloadRepository by lazy { KNativeDownloadRepository.instance }
     private val queue: DownloadQueue by lazy { DownloadQueue() }
-    private val produceWorker: ProduceWorker by lazy { ProduceWorker(this, queue) }
+    private val produceWorker: ProduceWorker by lazy { ProduceWorker(queue) }
 
+    /**
+     * Init producer which function is add to queue
+     */
     fun init() {
         produceWorker.initProducer()
     }
@@ -31,16 +30,9 @@ class KNativeDownloader(
     }
 
 
-
-    fun putPending(url: String) {
+    fun downloadFile(url: String) {
         val newDownload = FileDownload(url)
-        repository.insertDownload(newDownload)
+        repository.insert(newDownload)
     }
 
-    companion object {
-        /**
-         * Number of downloads that will do at the same time
-         */
-        const val PARALLEL_DOWNLOADS_DEFAULT: Long = 1
-    }
 }

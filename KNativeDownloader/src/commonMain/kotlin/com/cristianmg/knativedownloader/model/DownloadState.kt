@@ -20,7 +20,7 @@ enum class DownloadState(val state:String) {
     /**
      * The download is downloaded the process was finish with state success
      */
-    SUCESS("SUCCESS"),
+    SUCCESS("SUCCESS"),
 
     /**
      * The download is downloaded the process was finish with state fail

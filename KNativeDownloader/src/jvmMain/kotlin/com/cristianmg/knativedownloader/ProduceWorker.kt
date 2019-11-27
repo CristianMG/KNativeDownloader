@@ -5,13 +5,13 @@ import java.util.concurrent.Executors
 
 /**
  *
- * @property kNativeDownloader KNativeDownloader
- * @property fj ForkJoinPool
+ * @property queue DownloadQueue
  * @property isQueueBusy Boolean
+ * @property executor (java.util.concurrent.ExecutorService..java.util.concurrent.ExecutorService?)
+ * @property isCanceledThread Boolean
  * @constructor
  */
-actual class ProduceWorker actual constructor(val kNativeDownloader: KNativeDownloader,
-                                              val queue: DownloadQueue) {
+actual class ProduceWorker actual constructor(private val queue: DownloadQueue) {
 
     /**
      * Indicate if queue is busy

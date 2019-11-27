@@ -60,6 +60,7 @@ kotlin {
                 implementation("org.apache.commons:commons-io:1.3.2")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
                 implementation ("com.squareup.sqldelight:sqlite-driver:1.2.0")
+                implementation ("org.xerial:sqlite-jdbc:3.21.0.1")
             }
         }
         val jvmTest by getting {
@@ -69,6 +70,8 @@ kotlin {
                 implementation("junit:junit:4.12")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.2")
+                implementation ("com.squareup.sqldelight:sqlite-driver:1.2.0")
+                implementation ("org.xerial:sqlite-jdbc:3.21.0.1")
             }
 
         }
