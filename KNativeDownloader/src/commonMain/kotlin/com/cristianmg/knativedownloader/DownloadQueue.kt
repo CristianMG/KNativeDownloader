@@ -34,18 +34,39 @@ class DownloadQueue(
      * Check if the queue is busy
      * @return Boolean
      */
-    fun isBusy(): Boolean =
-            jobs.size > 10
+    val isBusy:Boolean
+    get() = jobs.size > 10
 
     /**
-     * Stop download if it's started and remove from queue
-     * @param downloadJob String url which we want remove and stop from downloader
+     * Jobs size
      */
-    fun cancel(downloadJob: DownloadJob) {
-        if (downloadJob.job.isActive)
-            downloadJob.job.cancel("Download cance by client")
-        jobs.remove(downloadJob)
+    val size: Int
+        get() = jobs.size
+
+    fun getJob(url: String): DownloadJob? = jobs.filter { it.fileDownload.url == url }.firstOrNull()
+
+    /**
+     * External function to cancel a download
+     * @param downloadJob FileDownload
+     */
+    fun cancel(downloadJob: FileDownload) {
+        jobs.filter { it.fileDownload.url == downloadJob.url }.forEach {
+            cancel(it)
+        }
     }
+
+
+    /**
+     * Search the next item and add to job
+     */
+    fun addNextItemToQueue() {
+        repository.getNextQueueItem()?.let {
+            val worker = scope.async { engine.downloadFile(it) }
+            jobs.add(DownloadJob(it, worker))
+            worker.start()
+        }
+    }
+
 
     /**
      * Stop all downloads and clear queue
@@ -59,14 +80,13 @@ class DownloadQueue(
     }
 
     /**
-     * Search the next item and add to job
+     * Stop download if it's started and remove from queue
+     * @param downloadJob String url which we want remove and stop from downloader
      */
-    fun addNextItemToQueue() {
-        repository.getNextQueueItem()?.let {
-            val worker = scope.async { engine.downloadFile(it) }
-            jobs.add(DownloadJob(it, worker))
-            worker.start()
-        }
+    private fun cancel(downloadJob: DownloadJob) {
+        if (downloadJob.job.isActive)
+            downloadJob.job.cancel("Download cance by client")
+        jobs.remove(downloadJob)
     }
 
     override fun onProgressDownloadChange(fileDownload: FileDownload) {}
@@ -91,5 +111,4 @@ class DownloadQueue(
     override fun onDownloadStart(fileDownload: FileDownload) {
         repository.updateStateDownload(fileDownload.uuid, DownloadState.DOWNLOADING)
     }
-
 }

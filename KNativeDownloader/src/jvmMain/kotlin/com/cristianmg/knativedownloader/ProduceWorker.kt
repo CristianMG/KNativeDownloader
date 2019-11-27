@@ -17,7 +17,7 @@ actual class ProduceWorker actual constructor(private val queue: DownloadQueue) 
      * Indicate if queue is busy
      */
     actual val isQueueBusy: Boolean
-        get() = queue.isBusy()
+        get() = queue.isBusy
 
     private var executor = Executors.newSingleThreadExecutor()
     private var isCanceledThread: Boolean = false
