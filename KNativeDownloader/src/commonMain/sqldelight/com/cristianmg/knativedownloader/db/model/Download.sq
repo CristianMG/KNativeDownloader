@@ -20,7 +20,7 @@ INSERT INTO download (url,uuid,size_file,extension,downloaded_path,state)
 VALUES(?,?,?,?,?,?);
 
 getById:
-SELECT * FROM download WHERE uuid = ?;
+SELECT * FROM download WHERE url = ?;
 
 updateStateDownload:
 UPDATE download
