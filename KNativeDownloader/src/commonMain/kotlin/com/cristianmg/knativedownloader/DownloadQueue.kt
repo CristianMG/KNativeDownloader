@@ -34,8 +34,8 @@ class DownloadQueue(
      * Check if the queue is busy
      * @return Boolean
      */
-    val isBusy:Boolean
-    get() = jobs.size > 10
+    val isBusy: Boolean
+        get() = jobs.size > 10
 
     /**
      * Jobs size
@@ -43,14 +43,20 @@ class DownloadQueue(
     val size: Int
         get() = jobs.size
 
+
+    /**
+     * External function return a job with url
+     * @param url String
+     * @return DownloadJob?
+     */
     fun getJob(url: String): DownloadJob? = jobs.filter { it.fileDownload.url == url }.firstOrNull()
 
     /**
      * External function to cancel a download
      * @param downloadJob FileDownload
      */
-    fun cancel(downloadJob: FileDownload) {
-        jobs.filter { it.fileDownload.url == downloadJob.url }.forEach {
+    fun cancel(fileDownload: FileDownload) {
+        getJob(fileDownload.url)?.let {
             cancel(it)
         }
     }
